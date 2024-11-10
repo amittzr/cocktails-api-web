@@ -1,0 +1,170 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f8fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #5c2a9d;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Form and Button Styling */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Adds space between input and button */
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 1em;
+}
+
+button {
+    background-color: #5c2a9d;
+    color: #fff;
+    padding: 10px 15px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    white-space: nowrap; /* Prevents text wrapping */
+    min-width: 120px; /* Ensures button has enough space for one-line text */
+}
+
+button:hover {
+  background-color: #48217d;
+}
+
+/* Cocktail Image */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+/* Ingredients List */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .card {
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+  }
+
+  input[type="text"] {
+    width: 70%;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p, li {
+    font-size: 1.2em;
+  }
+
+  img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

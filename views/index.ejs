@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cocktail Maker</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+  <div class="card">
+    <h1>What's your Cocktail?</h1>
+
+    <button type="submit" id="randomCocktail" onclick="window.location.href='/'">Get Random Cocktail</button>
+    <form action="/search" method="get">
+      <input type="text" name="name" placeholder="Enter cocktail name" required>
+      <button type="submit">Search by Name</button>
+    </form>
+
+    <!-- Name and Photo -->
+    <h2><%= name %></h2>
+    <% if (photo) { %>
+      <img src="<%= photo %>" alt="<%= name %> photo">
+    <% } %>
+
+    <!-- Category, isAlcoholic and Instructions -->
+    <p><strong>Category:</strong> <%= category %></p>
+    <p><strong>Is alcoholic:</strong> <%= isAlcoholic %></p>
+    <p><strong>Instructions:</strong> <%= instructions %></p>
+
+    <!-- Ingredients and Measures -->
+    <h3>Ingredients:</h3>
+    <ul>
+      <% ingredients.forEach(ingredient => { %>
+        <li><%= ingredient.measure %> <%= ingredient.ingredient %></li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>
+
